@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductViewActivity">
+
+
+    <TextView
+        android:id="@+id/ProductViewLabelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="Nome"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ProductViewEditName"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/ProductViewLabelName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ProductViewLabelName" />
+
+    <TextView
+        android:id="@+id/ProductViewLabelPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Valor de venda"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/ProductViewLabelName"
+        app:layout_constraintTop_toBottomOf="@+id/ProductViewLabelName" />
+
+    <EditText
+        android:id="@+id/ProductViewEditPrice"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/ProductViewLabelPrice"
+        app:layout_constraintEnd_toEndOf="@+id/ProductViewEditName"
+        app:layout_constraintTop_toTopOf="@+id/ProductViewLabelPrice" />
+
+    <TextView
+        android:id="@+id/ProductViewLabelCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Custo por unidade"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/ProductViewLabelPrice"
+        app:layout_constraintTop_toBottomOf="@+id/ProductViewLabelPrice" />
+
+    <EditText
+        android:id="@+id/ProductViewEditCost"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/ProductViewLabelCost"
+        app:layout_constraintEnd_toEndOf="@+id/ProductViewEditPrice"
+        app:layout_constraintTop_toTopOf="@+id/ProductViewLabelCost" />
+
+    <TextView
+        android:id="@+id/ProductViewLabelProfit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Lucro por unidade"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/ProductViewLabelCost"
+        app:layout_constraintTop_toBottomOf="@+id/ProductViewLabelCost" />
+
+    <EditText
+        android:id="@+id/ProductViewEditProfit"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/ProductViewLabelProfit"
+        app:layout_constraintEnd_toEndOf="@+id/ProductViewEditCost"
+        app:layout_constraintTop_toTopOf="@+id/ProductViewLabelProfit" />
+
+<!--    &lt;!&ndash;        app:layout_constraintTop_toBottomOf="ProductViewLabelProfit" &ndash;&gt;<![CDATA[-->
+<!--        />-->
+
+
+<!--    ]]>-->
+
+    <ListView
+        android:id="@+id/ProductViewListItems"
+        android:layout_width="345dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="113dp"
+        app:layout_constraintBottom_toTopOf="@+id/IngredientViewButtonRemove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProductViewLabelProfit" />
+
+    <Button
+        android:id="@+id/IngredientViewButtonRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="onRemove"
+        android:text="Remover Produto"
+        app:backgroundTint="#F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

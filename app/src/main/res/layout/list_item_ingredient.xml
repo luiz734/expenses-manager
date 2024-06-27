@@ -1,0 +1,23 @@
+<!-- list_item_ingredient.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ingredientName"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCostAmount"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:text="R$cost por amount"
+        android:textSize="16sp" />
+
+</LinearLayout>
